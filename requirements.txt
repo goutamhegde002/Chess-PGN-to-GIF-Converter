@@ -2,4 +2,8 @@ cairosvg
 cairocffi
 pycairo
 gunicorn
-flask
+Flask
+python-chess
+Pillow
+flask-cors
+werkzeug
