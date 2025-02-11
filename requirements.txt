@@ -2,3 +2,4 @@ cairosvg
 cairocffi
 pycairo
 gunicorn
+flask
