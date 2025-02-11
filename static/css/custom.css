@@ -1,0 +1,126 @@
+/* Minimal custom styling */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #212529;
+  --card-bg: #ffffff;
+  --card-border: rgba(0, 0, 0, 0.125);
+  --input-bg: #ffffff;
+  --input-text: #212529;
+  --navbar-bg: #f8f9fa;
+  --card-header-bg: #f8f9fa;
+  --card-header-text: #212529;
+}
+
+[data-theme="dark"] {
+  --bg-color: #212529;
+  --text-color: #f8f9fa;
+  --card-bg: #343a40;
+  --card-border: rgba(255, 255, 255, 0.125);
+  --input-bg: #2b3035;
+  --input-text: #f8f9fa;
+  --navbar-bg: #343a40;
+  --card-header-bg: #2b3035;
+  --card-header-text: #f8f9fa;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.card {
+  background-color: var(--card-bg);
+  border-color: var(--card-border);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  background-color: var(--card-header-bg);
+  border-bottom: 1px solid var(--card-border);
+  color: var(--card-header-text);
+}
+
+.card-title {
+  color: var(--card-header-text);
+  margin-bottom: 0;
+}
+
+.form-label {
+  color: var(--text-color);
+}
+
+.form-control {
+  background-color: var(--input-bg);
+  color: var(--input-text);
+  border-color: var(--card-border);
+}
+
+.form-control:focus {
+  background-color: var(--input-bg);
+  color: var(--input-text);
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+.form-control::placeholder {
+  color: var(--text-color);
+  opacity: 0.65;
+}
+
+#board {
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+#board:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom chessboard colors */
+.white-1e1d7 {
+  background-color: #f0d9b5;
+}
+
+.black-3c85d {
+  background-color: #b58863;
+}
+
+/* Footer styling */
+.footer {
+  background-color: var(--navbar-bg);
+  border-top: 1px solid var(--card-border);
+}
+
+.footer a {
+  color: var(--text-color);
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #0d6efd;
+}
+
+/* Navbar styling */
+.navbar {
+  background-color: var(--navbar-bg) !important;
+  border-bottom: 1px solid var(--card-border);
+}
+
+.navbar-brand {
+  color: var(--text-color) !important;
+}
+
+/* Button styling in dark mode */
+[data-theme="dark"] .btn-outline-secondary {
+  color: var(--text-color);
+  border-color: var(--text-color);
+}
+
+[data-theme="dark"] .btn-outline-secondary:hover {
+  color: #212529;
+  background-color: var(--text-color);
+  border-color: var(--text-color);
+}

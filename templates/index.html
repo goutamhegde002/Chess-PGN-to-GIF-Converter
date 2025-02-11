@@ -1,0 +1,56 @@
+{% extends "base.html" %} {% block content %}
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card mb-4">
+        <div class="card-header">
+          <h5 class="card-title mb-0">Upload PGN</h5>
+        </div>
+        <div class="card-body">
+          <form id="pgnForm" enctype="multipart/form-data">
+            <div class="mb-3">
+              <label for="pgnFile" class="form-label">Upload PGN File</label>
+              <input
+                type="file"
+                class="form-control"
+                id="pgnFile"
+                name="file"
+                accept=".pgn"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="pgnText" class="form-label">Or Paste PGN Text</label>
+              <textarea
+                class="form-control"
+                id="pgnText"
+                name="pgn_text"
+                rows="5"
+                placeholder="Paste your PGN notation here..."
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" id="convertBtn">
+              <span
+                class="spinner-border spinner-border-sm d-none"
+                role="status"
+                aria-hidden="true"
+              ></span>
+              Convert to GIF
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h5 class="card-title mb-0">Preview Board</h5>
+        </div>
+        <div class="card-body">
+          <div id="board" class="chessboard-container"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="alert alert-danger d-none" id="errorAlert" role="alert"></div>
+{% endblock %}
